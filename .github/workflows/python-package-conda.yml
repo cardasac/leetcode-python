@@ -21,12 +21,11 @@ jobs:
     - name: Install dependencies
       run: |
         conda install anaconda-project
-        anaconda-project prepare
-        conda activate envs/default/
+        anaconda-project prepare        
         
     - name: Install package
       run: |
-        pip install -e .
+        pip install .
 
     - name: Lint with flake8
       run: |
