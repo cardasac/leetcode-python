@@ -1,0 +1,13 @@
+[run]
+branch = True
+omit =
+    envs/*
+    *__init__*
+source =
+    src/algorithms
+    src/utils
+
+[report]
+show_missing = true
+precision = 2
+fail_under = 50.00
