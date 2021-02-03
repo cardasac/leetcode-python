@@ -24,12 +24,10 @@ jobs:
         anaconda-project prepare
     - name: Lint with flake8
       run: |
-        conda install flake8
         # stop the build if there are Python syntax errors or undefined names
         flake8 solutions tests --count --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 solutions tests --count --exit-zero --max-complexity=10 --max-line-length=79 --statistics
     - name: Test with pytest
       run: |
-        conda install pytest
         pytest
