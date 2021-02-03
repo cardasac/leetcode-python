@@ -20,17 +20,13 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        conda install anaconda-project
-        anaconda-project prepare        
+        conda install pytest flake8 black     
         
-    - name: Install package
-      run: |
-        pip install .
-
     - name: Lint with flake8
       run: |
-        anaconda-project run format
+        black solutions --line-length 79
+        flake8 solutions tests --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length=79
 
     - name: Test with pytest
       run: |
-        anaconda-project run test
+        pytest
