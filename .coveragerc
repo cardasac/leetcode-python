@@ -1,13 +1,16 @@
 [run]
 branch = True
 omit =
-    envs/*
     *__init__*
-source =
-    src/algorithms
-    src/utils
+    tests/*
+    envs/
+source = solutions
+
+[paths]
+source = solutions
 
 [report]
 show_missing = true
 precision = 2
 fail_under = 50.00
+skip_empty = true

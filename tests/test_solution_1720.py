@@ -1,4 +1,4 @@
-from solution_1720 import Solution
+from solutions.solution_1720 import Solution
 
 
 def test_decode():
