@@ -4,19 +4,19 @@ icon:
 
 description: Use this for testing and formatting leetcode solutions.
 
-#
-# In the commands section, list your runnable scripts, notebooks, and other code.
-# Use `anaconda-project add-command` to add commands.
-#
+variables:
+  line_length: 79
+
 commands:
   test:
     unix: pytest
     env_spec: default
 
   format:
-    unix: >
-      flake8 solutions tests --count --show-source --statistics
-      --exit-zero --max-complexity=10 --max-line-length=79
+
+    unix: |
+      black solutions --line-length {{ line_length }}
+      flake8 solutions tests --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length={{ line_length }}
     env_spec: default
 
 downloads: { }
