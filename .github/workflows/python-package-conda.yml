@@ -22,7 +22,7 @@ jobs:
       run: |
         conda install anaconda-project
         anaconda-project prepare
-        source ~/anaconda3/etc/profile.d/conda.sh
+        source $CONDA/bin/conda.sh
         conda activate envs/default/
         pip install -e .
         
