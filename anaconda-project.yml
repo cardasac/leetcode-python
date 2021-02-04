@@ -13,7 +13,6 @@ commands:
     env_spec: default
 
   format:
-
     unix: |
       black solutions --line-length {{ line_length }}
       flake8 solutions tests --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length={{ line_length }}

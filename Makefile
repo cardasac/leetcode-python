@@ -15,6 +15,9 @@ coverage:
 	@${COV} run -m pytest ${TESTS} && ${COV} report -m \
 	 && ${COV} html && xdg-open ${REPORT} || echo "Needs more coverage"
 
+deploy:
+    conda build meta.yml --no-include-recipe
+
 format:
 	@black ${FILES} --line-length 79
 	@pylint ${FILES} || echo ${MESSAGE}
