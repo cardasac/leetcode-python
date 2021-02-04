@@ -1,27 +1,25 @@
 COV = coverage
-SRC := solutions
 TESTS := $(wildcard tests/*.py)
 HTML := htmlcov
 REPORT = ${HTML}/index.html
-FILES := tests/*.py solutions
-MESSAGE := "Still some linting issues"
 
-.PHONY: install test coverage format clean
+.PHONY: install test coverage format clean deploy
+
+install:
+	@anaconda-project prepare
 
 test:
 	@python -m pytest tests
 
 coverage:
 	@${COV} run -m pytest ${TESTS} && ${COV} report -m \
-	 && ${COV} html && xdg-open ${REPORT} || echo "Needs more coverage"
+	&& ${COV} html && xdg-open ${REPORT} || echo "Needs more coverage"
 
 deploy:
-    conda build meta.yml --no-include-recipe
+	@conda-build .
 
 format:
-	@black ${FILES} --line-length 79
-	@pylint ${FILES} || echo ${MESSAGE}
-	@flake8 ${FILES} || echo ${MESSAGE}
+	@anaconda-project run format
 
 clean:
 	@echo "Cleaning up..."
