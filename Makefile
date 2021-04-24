@@ -12,8 +12,7 @@ test:
 	@python -m pytest tests
 
 coverage:
-	@${COV} run -m pytest ${TESTS} && ${COV} report -m \
-	&& ${COV} html && xdg-open ${REPORT} || echo "Needs more coverage"
+	@anaconda-project run test_coverage
 
 deploy:
 	@conda-build .

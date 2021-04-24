@@ -24,11 +24,11 @@ about:
   home: The package home page
   license: BSD
   license_family: BSD
-  license_file:
+  license_file: LICENCE.md
   summary: "Composable command line interface toolkit"
   doc_url:
   dev_url:
 
 extra:
   recipe-maintainers:
-    - your-github-id-here
+    - AlexandruCardas
