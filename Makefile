@@ -1,24 +1,18 @@
 COV = coverage
+FOLDERS = solutions tests
 TESTS := $(wildcard tests/*.py)
 HTML := htmlcov
 REPORT = ${HTML}/index.html
+LINE_LENGTH := 79
 
 .PHONY: install test coverage format clean deploy
-
-install:
-	@anaconda-project prepare
 
 test:
 	@python -m pytest tests
 
-coverage:
-	@anaconda-project run test_coverage
-
-deploy:
-	@conda-build .
-
 format:
-	@anaconda-project run format
+	black $(FOLDERS) --line-length $(LINE_LENGTH)
+	flake8 $(FOLDERS) --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length=$(LINE_LENGTH)
 
 clean:
 	@echo "Cleaning up..."
