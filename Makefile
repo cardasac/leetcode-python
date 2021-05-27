@@ -12,6 +12,7 @@ test:
 
 format:
 	black $(FOLDERS) --line-length $(LINE_LENGTH)
+	#pylint $(FOLDERS)
 	flake8 $(FOLDERS) --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length=$(LINE_LENGTH)
 
 clean:
