@@ -14,7 +14,9 @@ class TreeNode:
         """Insert node into the tree.
 
         :param data: The value to pass to the node
+        :return:
         """
+
         if self.data:
             if data < self.data:
                 if self.left is None:

@@ -8,11 +8,14 @@ LINE_LENGTH := 79
 .PHONY: install test coverage format clean deploy
 
 test:
-	@python -m pytest tests
+	poetry run pytest -n auto
+
+type-check:
+	poetry run mypy solutions
 
 format:
 	black $(FOLDERS) --line-length $(LINE_LENGTH)
-	#pylint $(FOLDERS)
+	pylint $(FOLDERS)
 	flake8 $(FOLDERS) --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length=$(LINE_LENGTH)
 
 clean:
