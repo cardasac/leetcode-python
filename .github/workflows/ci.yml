@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Install poetry
         run: pipx install poetry
       - uses: actions/setup-python@v5
@@ -19,6 +21,11 @@ jobs:
         run: poetry install
       - name: Run tests
         run: poetry run pytest
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   pyright:
     runs-on: ubuntu-latest
     steps:
