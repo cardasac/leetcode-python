@@ -4,10 +4,10 @@ omit =
     *__init__*
     tests/*
     envs/
-source = solutions
+source = src
 
 [paths]
-source = solutions
+source = src
 
 [report]
 show_missing = true

@@ -1,4 +1,4 @@
-from solutions.solution_1431 import Solution
+from src.solution_1431 import Solution
 
 
 def test_kids_with_candies():

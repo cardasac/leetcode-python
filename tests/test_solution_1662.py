@@ -1,4 +1,4 @@
-from solutions.solution_1662 import Solution
+from src.solution_1662 import Solution
 
 
 def test_array_strings_are_equal():

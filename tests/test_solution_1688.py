@@ -1,4 +1,4 @@
-from solutions.solution_1688 import Solution
+from src.solution_1688 import Solution
 
 
 def test_number_of_matches():

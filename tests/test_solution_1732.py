@@ -1,4 +1,4 @@
-from solutions.solution_1732 import Solution
+from src.solution_1732 import Solution
 
 
 def test_largest_altitude():

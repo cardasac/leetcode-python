@@ -1,4 +1,4 @@
-from solutions.solution_1672 import Solution
+from src.solution_1672 import Solution
 
 
 def test_maximum_wealth():
