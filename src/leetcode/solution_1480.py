@@ -1,11 +1,6 @@
-from typing import List
-
-
 class Solution:
-    def runningSum(self, nums: List[int]) -> List[int]:
-        result: List[int] = [nums[0]]
+    def runningSum(self, nums: list[int]) -> list[int]:
+        result: list[int] = [nums[0]]
 
-        for index, num in enumerate(nums[1:]):
-            result.append(num + result[index])
-
+        result.extend(num + result[index] for index, num in enumerate(nums[1:]))
         return result

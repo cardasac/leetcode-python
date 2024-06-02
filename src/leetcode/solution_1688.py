@@ -11,13 +11,13 @@ class Solution:
         #
         # return total_matches
 
-        def backtracking(n):
+        def backtracking(n: int) -> int:
             if n == 1:
                 return 0
 
             if n % 2 == 0:
                 return n // 2 + backtracking(n // 2)
-            else:
-                return 1 + n // 2 + backtracking(n // 2)
+
+            return 1 + n // 2 + backtracking(n // 2)
 
         return backtracking(n)
