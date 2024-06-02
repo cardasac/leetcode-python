@@ -139,7 +139,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 /.scannerwork/report-task.txt
-/sonar-project.properties
 /.scannerwork/.sonar_lock
 
 .idea/
