@@ -1,4 +1,4 @@
-from src.solution_1720 import Solution
+from src.leetcode.solution_1720 import Solution
 
 
 def test_decode():

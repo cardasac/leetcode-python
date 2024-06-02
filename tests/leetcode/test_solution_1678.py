@@ -1,4 +1,4 @@
-from src.solution_1678 import Solution
+from src.leetcode.solution_1678 import Solution
 
 
 def test_interpret():
