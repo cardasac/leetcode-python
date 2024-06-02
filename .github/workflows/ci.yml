@@ -5,7 +5,7 @@ env:
   PYTHON_VERSION: 3.12
 
 jobs:
-  build-linux:
+  sonarcloud:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -74,8 +74,7 @@ jobs:
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
 
-  analyze:
-    name: Analyze (python)
+  codeql:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     permissions:
