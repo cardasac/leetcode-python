@@ -12,7 +12,8 @@ def test_count_consistent_strings():
     )
     assert (
         solution.countConsistentStrings(
-            "cad", ["cc", "acd", "b", "ba", "bac", "bad", "ac", "d"],
+            "cad",
+            ["cc", "acd", "b", "ba", "bac", "bad", "ac", "d"],
         )
         == 4
     )
