@@ -3,14 +3,20 @@ from typing import Optional
 
 
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(
+        self: "ListNode",
+        val: int = 0,
+        next: "None | ListNode" = None,
+    ) -> None:
         self.val = val
         self.next = next
 
 
 class Solution:
     def mergeTwoLists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
+        self,
+        list1: Optional[ListNode],
+        list2: Optional[ListNode],
     ) -> Optional[ListNode]:
         if not list1 or not list2:
             return list1 or list2
