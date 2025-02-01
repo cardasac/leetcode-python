@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["Alexandru Constantin Cardas <calexc95@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.test.dependencies]
+pytest-cov = "^5.0.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10"
+ruff = "^0.4.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = ["ALL"]
+src = ["src", "tests"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+testpaths = "tests"
+
+[tool.coverage.run]
+relative_files = true
+source = ["src/"]
+branch = true
+concurrency = ["multiprocessing"]
+parallel = true
+sigterm = true
+omit = ["tests/**"]
+
+[tool.pyright]
+include = ["src"]
+exclude = ["**/node_modules", "**/__pycache__", "src/experimental", "src/typestubs"]
+defineConstant = { DEBUG = true }
+
+reportUnusedFunction = true
+reportUnusedImport = true
+reportUnusedClass = true
+reportUnusedVariable = true
+reportDuplicateImport = true
+strictListInference = true
+reportMissingImports = true
+reportMissingTypeStubs = false
+analyzeUnannotatedFunctions = true
+deprecateTypingAliases = true
+reportConstantRedefinition = true
+reportShadowedImports = true
+reportUnusedExpression = true
+reportGeneralTypeIssues = false
+
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+typeCheckingMode = "basic"
