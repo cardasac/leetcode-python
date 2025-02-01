@@ -1,10 +1,28 @@
-name: Test Python Solution
+name: Continuous Integration
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 jobs:
+  qodana:
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}  # to check out the actual pull request commit, not the merge commit
+          fetch-depth: 0  # a full history is required for pull request analysis
+      - name: 'Qodana Scan'
+        uses: JetBrains/qodana-action@v2024.3
+        with:
+          pr-mode: false
+        env:
+          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_1328645738 }}
+          QODANA_ENDPOINT: 'https://qodana.cloud'
   sonarcloud:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,7 +54,7 @@ jobs:
             -Dsonar.projectKey=cardasac_leetcode-python
             -Dsonar.organization=cardasac
   pyright:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - uses: actions/checkout@v4
       - name: Set up NPM
