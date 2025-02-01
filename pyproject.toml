@@ -8,6 +8,52 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "coverage>=7.6.10",
+    "pytest-cov>=6.0.0",
     "pytest>=8.3.4",
     "ruff>=0.9.4",
 ]
+
+[tool.ruff]
+select = ["ALL"]
+src = ["src", "tests"]
+
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+testpaths = "tests"
+
+[tool.coverage.run]
+relative_files = true
+source = ["src/"]
+branch = true
+concurrency = ["multiprocessing"]
+parallel = true
+sigterm = true
+omit = ["tests/**"]
+
+[tool.pyright]
+include = ["src"]
+exclude = ["**/node_modules", "**/__pycache__", "src/experimental", "src/typestubs"]
+defineConstant = { DEBUG = true }
+
+reportUnusedFunction = true
+reportUnusedImport = true
+reportUnusedClass = true
+reportUnusedVariable = true
+reportDuplicateImport = true
+strictListInference = true
+reportMissingImports = true
+reportMissingTypeStubs = false
+analyzeUnannotatedFunctions = true
+deprecateTypingAliases = true
+reportConstantRedefinition = true
+reportShadowedImports = true
+reportUnusedExpression = true
+reportGeneralTypeIssues = false
+
+pythonVersion = "3.13"
+pythonPlatform = "Linux"
+typeCheckingMode = "basic"
