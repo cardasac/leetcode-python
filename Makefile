@@ -11,7 +11,8 @@ test:
 	uv run pytest
 
 format:
-	uv run ruff check --fix
+	uv run ruff format
+	uv run ruff check --fix src/**
 
 clean:
 	@echo "Cleaning up..."

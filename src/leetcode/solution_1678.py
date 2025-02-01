@@ -1,5 +1,3 @@
-
-
 class Solution:
     def interpret(self, command: str) -> str:
         stack: list[str] = []

@@ -1,5 +1,3 @@
-
-
 class Solution:
     def maxDepth(self, s: str) -> int:
         nesting_depth: int = 0
