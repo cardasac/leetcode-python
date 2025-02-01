@@ -21,6 +21,9 @@ jobs:
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_1328645738 }}
           QODANA_ENDPOINT: 'https://qodana.cloud'
+      - uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: ${{ runner.temp }}/qodana/results/qodana.sarif.json
   sonarcloud:
     runs-on: ubuntu-24.04-arm
     steps:
