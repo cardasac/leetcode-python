@@ -1,9 +1,8 @@
-from typing import List
 
 
 class Solution:
     def interpret(self, command: str) -> str:
-        stack: List[str] = []
+        stack: list[str] = []
 
         for string in command:
             if string == ")":

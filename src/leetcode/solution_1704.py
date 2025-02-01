@@ -1,9 +1,8 @@
-from typing import Set
 
 
 class Solution:
     def halvesAreAlike(self, s: str) -> bool:
-        vowels: Set[str] = set("aeiouAEIOU")
+        vowels: set[str] = set("aeiouAEIOU")
         count = 0
 
         for index in range(len(s) // 2):

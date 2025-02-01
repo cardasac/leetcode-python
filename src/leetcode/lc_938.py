@@ -1,4 +1,3 @@
-from typing import Optional
 
 
 class TreeNode:
@@ -9,4 +8,4 @@ class TreeNode:
 
 
 class Solution:
-    def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int: ...
+    def rangeSumBST(self, root: TreeNode | None, low: int, high: int) -> int: ...

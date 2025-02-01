@@ -1,10 +1,9 @@
-from typing import List
 
 
 class Solution:
     def maxDepth(self, s: str) -> int:
         nesting_depth: int = 0
-        stack: List[str] = []
+        stack: list[str] = []
 
         # Premature termination can save resources.
         if len(s) < 4:

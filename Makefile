@@ -5,18 +5,13 @@ HTML := htmlcov
 REPORT = ${HTML}/index.html
 LINE_LENGTH := 79
 
-.PHONY: install test coverage format clean deploy
+.PHONY: install test coverage format clean
 
 test:
-	poetry run pytest -n auto
-
-type-check:
-	poetry run mypy solutions
+	uv run pytest
 
 format:
-	black $(FOLDERS) --line-length $(LINE_LENGTH)
-	pylint $(FOLDERS)
-	flake8 $(FOLDERS) --count --show-source --statistics --exit-zero --max-complexity=10 --max-line-length=$(LINE_LENGTH)
+	uv run ruff check --fix
 
 clean:
 	@echo "Cleaning up..."

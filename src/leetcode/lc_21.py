@@ -1,5 +1,4 @@
 # Definition for singly-linked list.
-from typing import Optional
 
 
 class ListNode:
@@ -15,9 +14,9 @@ class ListNode:
 class Solution:
     def mergeTwoLists(
         self,
-        list1: Optional[ListNode],
-        list2: Optional[ListNode],
-    ) -> Optional[ListNode]:
+        list1: ListNode | None,
+        list2: ListNode | None,
+    ) -> ListNode | None:
         if not list1 or not list2:
             return list1 or list2
 
