@@ -21,6 +21,8 @@ jobs:
           enable-cache: true
       - name: Set up Python
         run: uv sync --all-extras --dev
+      - name: Export requirements
+        run: uv export > requirements.txt
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2024.3
         with:
