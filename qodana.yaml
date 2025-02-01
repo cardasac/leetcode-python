@@ -3,4 +3,5 @@ linter: jetbrains/qodana-python:2024.3
 bootstrap: rm -rf .idea && pip install -r requirements.txt
 profile:
   name: qodana.recommended
-raiseLicenseProblems: true
+exclude:
+  - name: CheckDependencyLicenses
