@@ -3,6 +3,6 @@ class Solution:
         new_date = []
 
         for i in date.split("-"):
-            new_date.append(f'{int(i):b}')
+            new_date.append(f"{int(i):b}")
 
         return str("-".join(new_date))
