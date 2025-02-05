@@ -4,10 +4,15 @@ from src.leetcode.solution_1684 import Solution
 def test_count_consistent_strings():
     solution = Solution()
     assert (
-        solution.countConsistentStrings("ab", ["ad", "bd", "aaab", "baa", "badab"]) == 2
+        solution.countConsistentStrings(
+            "ab", ["ad", "bd", "aaab", "baa", "badab"]
+        )
+        == 2
     )
     assert (
-        solution.countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"])
+        solution.countConsistentStrings(
+            "abc", ["a", "b", "c", "ab", "ac", "bc", "abc"]
+        )
         == 7
     )
     assert (

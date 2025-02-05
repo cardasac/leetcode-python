@@ -6,4 +6,9 @@ class TreeNode:
 
 
 class Solution:
-    def rangeSumBST(self, root: TreeNode | None, low: int, high: int) -> int: ...
+    def rangeSumBST(
+        self,
+        root: TreeNode | None,
+        low: int,
+        high: int,
+    ) -> int: ...
