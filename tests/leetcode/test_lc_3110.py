@@ -1,5 +1,5 @@
 import pytest
-from src.leetcode.lc_3110 import Solution
+from leetcode.lc_3110 import Solution
 
 
 @pytest.mark.parametrize("actual,expected", [("hello", 13), ("zaz", 50)])

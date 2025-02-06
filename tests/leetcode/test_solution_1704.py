@@ -1,4 +1,4 @@
-from src.leetcode.solution_1704 import Solution
+from leetcode.solution_1704 import Solution
 
 
 def test_halves_are_alike():

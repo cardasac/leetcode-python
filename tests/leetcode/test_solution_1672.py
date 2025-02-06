@@ -1,4 +1,4 @@
-from src.leetcode.solution_1672 import Solution
+from leetcode.solution_1672 import Solution
 
 
 def test_maximum_wealth():

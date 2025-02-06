@@ -1,5 +1,5 @@
 import pytest
-from src.leetcode.solution_1480 import Solution
+from leetcode.solution_1480 import Solution
 
 
 @pytest.mark.parametrize(

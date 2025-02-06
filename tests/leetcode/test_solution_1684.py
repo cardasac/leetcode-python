@@ -1,4 +1,4 @@
-from src.leetcode.solution_1684 import Solution
+from leetcode.solution_1684 import Solution
 
 
 def test_count_consistent_strings():

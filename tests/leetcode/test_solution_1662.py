@@ -1,4 +1,4 @@
-from src.leetcode.solution_1662 import Solution
+from leetcode.solution_1662 import Solution
 
 
 def test_array_strings_are_equal():

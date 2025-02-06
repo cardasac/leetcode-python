@@ -4,16 +4,17 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
+
 dependencies = [
-    "requests>=2.32.3",
+  "requests>=2.32.3",
 ]
 
 [dependency-groups]
 dev = [
-    "coverage>=7.6.10",
-    "pytest-cov>=6.0.0",
-    "pytest>=8.3.4",
-    "ruff>=0.9.4",
+  "coverage>=7.6.10",
+  "pytest-cov>=6.0.0",
+  "pytest>=8.3.4",
+  "ruff>=0.9.4",
 ]
 
 [tool.ruff]
@@ -24,7 +25,7 @@ line-length = 79
 
 [tool.pytest.ini_options]
 pythonpath = [
-  "."
+  "src",
 ]
 testpaths = "tests"
 

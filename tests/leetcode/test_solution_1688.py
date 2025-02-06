@@ -1,4 +1,4 @@
-from src.leetcode.solution_1688 import Solution
+from leetcode.solution_1688 import Solution
 
 
 def test_number_of_matches():

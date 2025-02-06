@@ -1,4 +1,4 @@
-from src.leetcode.solution_1732 import Solution
+from leetcode.solution_1732 import Solution
 
 
 def test_largest_altitude():
