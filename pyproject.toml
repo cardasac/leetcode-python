@@ -18,15 +18,18 @@ dev = [
 ]
 
 [tool.ruff]
-select = ["ALL"]
 src = ["src", "tests"]
 exclude = [".venv"]
 line-length = 79
+
+[tool.ruff.lint]
+select = ["ALL"]
 
 [tool.pytest.ini_options]
 pythonpath = [
   "src",
 ]
+
 testpaths = "tests"
 
 [tool.coverage.run]
