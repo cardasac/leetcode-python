@@ -29,11 +29,13 @@ select = ["ALL"]
 pythonpath = [
   "src",
 ]
+markers = [
+  "others"
+]
 
 testpaths = "tests"
 
 [tool.coverage.run]
-relative_files = true
 source = ["src/"]
 branch = true
 concurrency = ["multiprocessing"]

@@ -16,4 +16,4 @@ format:
 
 clean:
 	@echo "Cleaning up..."
-	@rm -rf htmlcov .pytest_cache .coverage
+	@rm -rf htmlcov .pytest_cache .coverage __pycache__
