@@ -1,4 +1,8 @@
+"""Real interview question."""
+
+
 def sum_contiguous(list_of_nums: list, target: int) -> bool:
+    """Check if there are contiguous blocks that sum up to target."""
     if target in list_of_nums:
         return True
 
@@ -13,7 +17,5 @@ def sum_contiguous(list_of_nums: list, target: int) -> bool:
 
             if current_sum == target:
                 return True
-            if current_sum > target:
-                break
 
     return False
