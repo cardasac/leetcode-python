@@ -3,7 +3,7 @@ class Solution:
         altitude: int = 0
         prev: int = 0
 
-        for number in [0] + gain:
+        for number in [0, *gain]:
             prev += number
             altitude = max(prev, altitude)
 
