@@ -19,12 +19,15 @@ class Solution:
                 flowerbed[i] = 1
                 result += 1
                 continue
+
             if i == len(flowerbed) - 1 and v == 0 and flowerbed[i - 1] == 0:
                 flowerbed[i] = 1
                 result += 1
                 break
+
             if i == len(flowerbed) - 1:
                 break
+
             if flowerbed[i - 1] == 0 and flowerbed[i + 1] == 0 and v == 0:
                 result += 1
                 flowerbed[i] = 1
