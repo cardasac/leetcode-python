@@ -48,7 +48,7 @@ jobs:
       - name: Run tests
         run: uv run pytest --cov=src --cov-branch --cov-report=xml:reports/coverage.xml --junitxml=reports/test-results.xml tests
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v4
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
